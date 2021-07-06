@@ -19,10 +19,10 @@ export default function Header() {
     <header>
       <div className='flex flex-1 w-full justify-start items-center lg:m-0 lg:pl-2'>
         <Hamburger onClick={handleOnClick} />
-        <h1 className='text-accent font-semibold cursor-pointer lg:py-2 lg:px-0 lg:text-left'>
+        <h1 className='flex-4 text-accent font-semibold cursor-pointer lg:py-2 lg:px-0 lg:text-left'>
           {APP_TITLE_TEXT}
         </h1>
-        <span className='relative flex items-center justify-center ml-6 h-10 w-10 font-semibold bg-accent text-primary rounded-full cursor-pointer md:hidden'>
+        <span className='relative flex items-center justify-center h-10 w-10 mr-6 font-semibold bg-accent text-primary rounded-full cursor-pointer lg:hidden lg:ml-6 lg:mr-0'>
           <a className=''>
             JO
             <span className='absolute flex items-center justify-center top-0 right-0 z-10 transform translate-x-1/4 -translate-y-1/4 w-5 h-5 bg-error rounded-full'>
@@ -45,7 +45,7 @@ export default function Header() {
           <a className='flex items-start w-max px-2 py-2 font-semibold text-accent border-2 border-blue-500 rounded-3xl cursor-pointer lg:px-6 lg:items-center lg:justify-center'>
             {CREATE_JOB_BTN_TEXT}
           </a>
-          <span className='hidden relative flex items-center justify-center ml-6 h-10 w-10 font-semibold bg-accent text-primary rounded-full cursor-pointer md:flex'>
+          <span className='hidden relative flex items-center justify-center ml-6 h-10 w-10 font-semibold bg-accent text-primary rounded-full cursor-pointer lg:flex'>
             <a className=''>
               JO
               <span className='absolute flex items-center justify-center top-0 right-0 z-10 transform translate-x-1/4 -translate-y-1/4 w-5 h-5 bg-error rounded-full'>
