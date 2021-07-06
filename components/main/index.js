@@ -26,6 +26,7 @@ export default function Main() {
         console.error(e);
       });
   }, [dispatch]);
+
   return (
     <main className='flex flex-col md:gap-4 md:m-4'>
       <JobSearchInput />
