@@ -67,13 +67,27 @@ export default function SideBarSection({ heading, filterValues }) {
         <div onClick={handleMoreClick}>{SHOW_MORE_TEXT}</div>
       )}
       {openModal && (
-        <Modal
-          heading={heading}
-          filterValues={filterValues}
-          handleFilterClick={handleFilterClick}
-          handleClose={handleClose}
-          appliedFilters={appliedFilters}
-        />
+        <Modal heading={heading} handleClose={handleClose}>
+          <ul className='grid grid-cols-4 gap-3 '>
+            {filterValues.map((value) => {
+              return (
+                <li className='flex items-center gap-3' key={value.key}>
+                  <input
+                    type='checkbox'
+                    id={value.key}
+                    name={value.key}
+                    checked={appliedFilters[heading]?.includes(value.key)}
+                    onClick={handleFilterClick}
+                  />
+                  <label htmlFor={value.key}>
+                    {value.key}{' '}
+                    <span className='text-gray'>{value.doc_count}</span>
+                  </label>
+                </li>
+              );
+            })}
+          </ul>
+        </Modal>
       )}
     </div>
   );
