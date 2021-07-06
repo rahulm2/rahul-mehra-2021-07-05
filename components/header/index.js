@@ -34,10 +34,10 @@ export default function Header() {
           ))}
         </nav>
         <nav className='flex flex-col flex-1 justify-end items-start w-full mb-4 lg:items-center lg:flex-row lg:mb-0'>
-          <a className='flex items-start w-max px-2 py-2 text-accent border-2 border-blue-500 rounded-3xl cursor-pointer lg:px-6 lg:items-center lg:justify-center'>
+          <a className='flex items-start w-max px-2 py-2 font-semibold text-accent border-2 border-blue-500 rounded-3xl cursor-pointer lg:px-6 lg:items-center lg:justify-center'>
             {CREATE_JOB_BTN_TEXT}
           </a>
-          <a className='flex items-start w-max px-2 py-2 cursor-pointer lg:px-6 lg:items-center lg:justify-center'>
+          <a className='flex items-start w-max px-2 py-2 font-semibold cursor-pointer lg:px-6 lg:items-center lg:justify-center'>
             {LOGOUT_BTN_TEXT}
           </a>
         </nav>
