@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Hamburger({ onClick }) {
   return (
-    <div className='absolute left-0.4 inline p-6 lg:hidden' onClick={onClick}>
+    <div className='p-6 lg:hidden' onClick={onClick}>
       <svg
         xmlns='http://www.w3.org/2000/svg'
         className='h-5 w-5'
