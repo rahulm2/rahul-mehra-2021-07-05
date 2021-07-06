@@ -13,7 +13,7 @@ export default function Modal({
   return (
     <div
       id='modal'
-      className='fixed flex items-center justify-center inset-0 w-full h-full bg-modalColor'
+      className='fixed flex items-center justify-center z-20 inset-0 w-full h-full bg-modalColor'
       onClick={handleClose}
     >
       <div className='flex flex-col p-6 rounded-sm bg-primary'>
