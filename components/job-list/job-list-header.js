@@ -13,10 +13,13 @@ export default function JobHeader({ jobsCount }) {
   const dispatch = useDispatch();
   const sorters = useSelector((state) => getSorters(state));
 
-  const handleSortClick = useCallback((e) => {
-    dispatch(updateSortersAction(e.target.id));
-    dispatch(fetchJobs());
-  }, []);
+  const handleSortClick = useCallback(
+    (e) => {
+      dispatch(updateSortersAction(e.target.id));
+      dispatch(fetchJobs());
+    },
+    [dispatch]
+  );
 
   return (
     <div className='flex justify-between mb-4'>

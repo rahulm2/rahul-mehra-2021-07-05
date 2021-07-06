@@ -28,10 +28,15 @@ export default function SideBarSection({ heading, filterValues }) {
     }
   }, []);
 
-  const handleFilterClick = useCallback((e) => {
-    dispatch(updateAppliedFiltersAction({ key: heading, value: e.target.id }));
-    dispatch(fetchJobs());
-  }, []);
+  const handleFilterClick = useCallback(
+    (e) => {
+      dispatch(
+        updateAppliedFiltersAction({ key: heading, value: e.target.id })
+      );
+      dispatch(fetchJobs());
+    },
+    [dispatch]
+  );
 
   return (
     <div className='px-4 py-4 mb-4 rounded-sm shadow bg-primary'>

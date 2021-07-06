@@ -8,7 +8,7 @@ import Job from '../job';
  */
 export default function Hospital({ hospital }) {
   const [toggle, setToggle] = useState(false);
-  const handleOnClick = useCallback((e) => {
+  const handleOnClick = useCallback(() => {
     setToggle((toggle) => !toggle);
   }, []);
 
