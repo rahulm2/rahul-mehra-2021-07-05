@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { updatePositionAction } from '../../store/actions';
+
 import { getJobs } from '../../store/selectors';
 import { fetchJobs } from '../../store/thunk';
 import Hospital from './hospital';
@@ -13,28 +13,9 @@ import { getJobCountReducer } from '../../utils';
 export default function JobList() {
   const jobs = useSelector((state) => getJobs(state));
   const dispatch = useDispatch();
-  const getPosition = (options) => {
-    return new Promise((resolve, reject) => {
-      navigator.geolocation.getCurrentPosition(resolve, reject, options);
-    });
-  };
-
   const jobsCount = useMemo(() => jobs?.reduce(getJobCountReducer, 0), [jobs]);
 
   useEffect(() => {
-    getPosition()
-      .then((position) => {
-        dispatch(
-          updatePositionAction({
-            latitude: position?.coords?.latitude,
-            longitude: position?.coords?.longitude
-          })
-        );
-      })
-      .catch((e) => {
-        console.error(e);
-      });
-
     dispatch(fetchJobs());
   }, [dispatch]);
 
