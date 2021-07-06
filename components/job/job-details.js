@@ -12,7 +12,7 @@ export default function JobDetails({ job }) {
     [job.hours]
   );
   return (
-    <div className='flex flex-col items-start py-2 md:flex-row md:items-center'>
+    <div className='flex flex-col items-start pb-2 md:flex-row md:items-center'>
       <div className='flex flex-col flex-2'>
         <JobDescription
           heading='Department'

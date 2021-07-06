@@ -32,7 +32,7 @@ export default function Job({ job }) {
             <span className='px-2'>{job.city}</span>
           </div>
         </div>
-        <p className='py-2'>{`${weeksBetweenMemo} weeks ago`}</p>
+        <p className='pt-2'>{`${weeksBetweenMemo} weeks ago`}</p>
       </div>
       {toggle && <JobDetails job={job} />}
     </div>
